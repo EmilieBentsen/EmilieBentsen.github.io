@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
         div{
-            width: 500px;
+            width: 800px;
             margin: auto;
         }
         input{
@@ -39,11 +39,11 @@
             if(event.key === "Enter"){
                 number++;
                 $(".comment-box").append( number + ". " + event.target.value + "<br>"+ "<br>");
-                if (number % 2 == 0){
-                    $(".comment-box").css("background-color", "white")
+                /*if (number % 2 == 0){
+                    $(".number").css("background-color", "white")
                 }else {
-                    $(".comment-box").css("background-color", "grey")
-                }
+                    $(".number").css("background-color", "grey")
+                }*/
                 $("#message").empty();
 
             }
