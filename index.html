@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emilies Wall</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        div{
+            width: 500px;
+            margin: auto;
+        }
+        input{
+            width: 500px;
+            height: 30px;
+            text-align: center;
+            font-size: 1.5em;
+
+        }
+        .comment-box{
+            background-color: gainsboro;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="https://cdn.wallpapersafari.com/83/70/Tkqv4E.jpg">
+    <br>
+    <input id="message" placeholder="write something fun">
+    <h1>Comments</h1>
+
+
+    <div class="comment-box">
+    </div>
+    <script>
+        $("body").css("text-align", "center")
+        $("img").css("height", "25em")
+        var number = 0;
+        $("#message").keydown(function(event) {
+            if(event.key === "Enter"){
+                number++;
+                $(".comment-box").append( number + ". " + event.target.value + "<br>"+ "<br>");
+                if (number % 2 == 0){
+                    $(".comment-box").css("background-color", "white")
+                }else {
+                    $(".comment-box").css("background-color", "grey")
+                }
+                $("#message").empty();
+
+            }
+
+        })
+
+        // todo value at the top of a comment
+        // todo clear the box
+
+    </script>
+</body>
+</html>
